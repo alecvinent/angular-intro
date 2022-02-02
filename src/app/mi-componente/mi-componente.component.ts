@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'mi-componente',
@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mi-componente.component.scss']
 })
 export class MiComponenteComponent implements OnInit {
+  // fields
+  counter: number;
 
-  constructor() { }
+  constructor() {
+    this.counter = 18;
+  }
 
   ngOnInit(): void {
+    console.log('MiComponenteComponent loaded');
+  }
+
+  addCount(){
+    this.counter += 1;
+  }
+
+  minusCount(){
+    this.counter -= 1;
   }
 
 }

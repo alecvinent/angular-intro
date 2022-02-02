@@ -1,1 +1,14 @@
 <p>mi-componente works!</p>
+
+<button (click)="addCount()">+</button>{{' '}}<button (click)="minusCount()">-</button>
+
+<p [style.background]="counter >= 18 ? 'green' : 'red'" [style.color]="'white'">El valor es {{counter}}.</p>
+
+
+condicionales
+<div *ngIf="counter >= 18">
+  Eres mayor
+</div>
+<div *ngIf="counter < 18">
+  Eres menor
+</div>
