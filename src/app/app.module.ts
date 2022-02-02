@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { MiComponenteComponent } from './mi-componente/mi-componente.component';
+import { SegundoComponenteComponent } from './segundo-componente/segundo-componente.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MiComponenteComponent,
+    SegundoComponenteComponent
   ],
   imports: [
     BrowserModule
@@ -13,4 +17,6 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+	title = 'Hello World';
+}
