@@ -1,6 +1,7 @@
 <p>mi-componente works!</p>
 
-<button (click)="addCount()">+</button>{{' '}}<button (click)="minusCount()">-</button>
+<button (click)="addCount()">+</button>{{' '}}
+<button (click)="minusCount()">-</button>
 
 <p [style.background]="counter >= 18 ? 'green' : 'red'" [style.color]="'white'">El valor es {{counter}}.</p>
 
@@ -12,3 +13,9 @@ condicionales
 <div *ngIf="counter < 18">
   Eres menor
 </div>
+
+<h3>Colors</h3>
+{{colors[0]}}
+<select id="colors" (change)="changeBackground()">
+  <option *ngFor="let color of colors" [value]="color">{{color}}</option>
+</select>

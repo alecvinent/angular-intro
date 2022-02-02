@@ -8,9 +8,13 @@ import {Component, OnInit} from '@angular/core';
 export class MiComponenteComponent implements OnInit {
   // fields
   counter: number;
+  colors:Array<string>;
+  colorSelected: string;
 
   constructor() {
     this.counter = 18;
+    this.colors = ['green', 'white', 'yellow'];
+    this.colorSelected = this.colors[0];
   }
 
   ngOnInit(): void {
@@ -23,6 +27,10 @@ export class MiComponenteComponent implements OnInit {
 
   minusCount(){
     this.counter -= 1;
+  }
+
+  changeBackground(){
+    console.log('changeBackground');
   }
 
 }
