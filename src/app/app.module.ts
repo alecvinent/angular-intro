@@ -12,6 +12,9 @@ import { MiComponenteComponent } from './mi-componente/mi-componente.component';
 import { SegundoComponenteComponent } from './segundo-componente/segundo-componente.component';
 import { MainToolbarComponent } from './main-toolbar/main-toolbar.component';
 import { MenuComponent } from './menu/menu.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -27,11 +30,14 @@ import { MenuComponent } from './menu/menu.component';
     FlexLayoutModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-	title = 'Hello World';
+	// title = 'Hello World';
 }

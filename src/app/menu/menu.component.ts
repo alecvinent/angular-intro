@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MatListItem} from "@angular/material/list";
 import {Dish} from "../shared/dish";
-import {dishes_data} from "../shared/data/dishes_data";
+import {DISHES} from "../shared/data/dishes_data";
 
 @Component({
   selector: 'app-menu',
@@ -10,12 +9,16 @@ import {dishes_data} from "../shared/data/dishes_data";
 })
 export class MenuComponent implements OnInit {
   //fields
-  dishes: Dish[] = dishes_data;
+  dishes: Array<Dish>;
+  selectedDish: Dish;
 
   constructor() {
+    this.dishes = DISHES;
+    this.selectedDish = DISHES[0];
   }
 
   ngOnInit(): void {
+    console.log(this.dishes.length + ' elements loaded');
   }
 
 }
