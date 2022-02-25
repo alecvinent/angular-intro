@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Dish} from "../shared/dish";
+import {Dish} from "../shared/custom_types";
 import {DISHES} from "../shared/data/dishes_data";
 
 @Component({
@@ -10,11 +10,9 @@ import {DISHES} from "../shared/data/dishes_data";
 export class MenuComponent implements OnInit {
   //fields
   dishes: Array<Dish>;
-  selectedDish: Dish;
 
   constructor() {
     this.dishes = DISHES;
-    this.selectedDish = DISHES[0];
   }
 
   ngOnInit(): void {
