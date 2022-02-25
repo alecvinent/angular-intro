@@ -10,13 +10,19 @@ import {DISHES} from "../shared/data/dishes_data";
 export class MenuComponent implements OnInit {
   //fields
   dishes: Array<Dish>;
+  selectedDish: Dish;
 
   constructor() {
     this.dishes = DISHES;
+    this.selectedDish = DISHES[0];
   }
 
   ngOnInit(): void {
     console.log(this.dishes.length + ' elements loaded');
+  }
+
+  onSelect(dish: Dish){
+    this.selectedDish = dish;
   }
 
 }
